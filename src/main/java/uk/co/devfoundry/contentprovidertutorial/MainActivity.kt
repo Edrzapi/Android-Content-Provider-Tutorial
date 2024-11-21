@@ -50,11 +50,10 @@ class MainActivity : ComponentActivity() {
                 android.Manifest.permission.READ_CALL_LOG
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // Permission is not granted, so request it
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(android.Manifest.permission.READ_CALL_LOG),
-                1 // Request code
+                1
             )
         }
     }
