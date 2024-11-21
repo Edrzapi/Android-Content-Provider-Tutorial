@@ -8,6 +8,7 @@ import java.util.Date
 
 class CallHistoryProvider {
         fun fetchCallHistory(contentResolver: ContentResolver): List<CallLogEntry> {
+
             // Define the columns to retrieve
             val projection = arrayOf(
                 CallLog.Calls._ID,

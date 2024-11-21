@@ -67,7 +67,7 @@ class MainActivity : ComponentActivity() {
                 .padding(100.dp, 250.dp)
                 .border(5.dp, color = Color.Blue),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center // Vertically center the buttons within Column
+            verticalArrangement = Arrangement.Center
         ) {
             Button(onClick = { navigate() }) {
                 Text(text = "Check out call history!")

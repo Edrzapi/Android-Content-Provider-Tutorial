@@ -37,14 +37,13 @@ class CallHistoryActivity : ComponentActivity() {
     fun CallLogContainer(viewModel: CallHistoryViewModel = viewModel()) {
         val callList by viewModel.callList.collectAsState()
         viewModel.loadCallHistory(LocalContext.current.contentResolver)
-        // Use a Column to arrange LazyColumn and Button vertically
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(50.dp)
         ) {
             LazyColumn(
-                modifier = Modifier.weight(1f) // Make LazyColumn take up available space
+                modifier = Modifier.weight(1f)
             ) {
                 items(callList) { call ->
                     Column(
@@ -55,7 +54,7 @@ class CallHistoryActivity : ComponentActivity() {
                         Text(text = "Number: ${call.number}")
                         Text(text = "Date: ${call.date}")
                         Text(text = "Duration: ${call.duration}")
-                        HorizontalDivider() /* Adds a divider between items */
+                        HorizontalDivider()
                     }
                 }
             }
