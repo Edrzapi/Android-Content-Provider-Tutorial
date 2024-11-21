@@ -13,7 +13,6 @@ class CallHistoryViewModel : ViewModel() {
     val callList: StateFlow<List<CallLogEntry>> = _callList.asStateFlow()
 
     fun loadCallHistory(contentResolver: ContentResolver) {
-        // Initialize the CallHistoryProvider and fetch data
         val callHistoryProvider = CallHistoryProvider()
         _callList.value = callHistoryProvider.fetchCallHistory(contentResolver)
     }
